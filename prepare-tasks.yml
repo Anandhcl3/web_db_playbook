@@ -22,5 +22,5 @@ msg: "You need to have Ansible 2.8 or higher to be able to run this playbook."
 vars_files:
 - ["./defaults/main.yml"]
 
-tasks:
-- include_tasks: tasks.yml
+#tasks:
+#- include_tasks: tasks.yml
