@@ -1,9 +1,11 @@
 ---
-- src: https://github.com/Anandhcl3/ngnix_role.git
-scm: git
-name: ngnix_role
-version: main
-- src: https://github.com/Anandhcl3/mysql_role.git
-scm: git
-name: mysql_role
-version: main
+- name: ngnix_role
+  src: https://github.com/Anandhcl3/ngnix_role.git
+  scm: git
+  version: main
+
+- name: mysql_role
+  src: https://github.com/Anandhcl3/mysql_role.git
+  scm: git
+  version: main
+
