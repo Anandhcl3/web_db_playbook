@@ -1,0 +1,9 @@
+---
+- src: https://buildman:buildman@ft-sdes-prx01.ftse.dev.stockex.local/scm/ar/prime-app-artifacts.git
+scm: git
+name: ngnix_role
+version: main
+- src: https://buildman:buildman@ft-sdes-prx01.ftse.dev.stockex.local/scm/ar/prime-db-artifacts.git
+scm: git
+name: mysql_role
+version: main

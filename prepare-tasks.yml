@@ -1,0 +1,26 @@
+---
+# system level playbook to execute galaxy role installation
+- hosts: localhost
+become: no
+
+tasks:
+- name: Installing all Ansible Galaxy roles from the requirements file
+command: ansible-galaxy install --role-file=requirements.yml --roles-path=roles --force
+
+
+- hosts: localhost
+connection: local
+become: no
+
+pre_tasks:
+- name: Check Ansible version requirements
+assert:
+that: "ansible_version.full is version_compare('2.8', '>=')"
+msg: "You need to have Ansible 2.8 or higher to be able to run this playbook."
+
+
+vars_files:
+- ["./defaults/main.yml"]
+
+tasks:
+- include_tasks: tasks.yml

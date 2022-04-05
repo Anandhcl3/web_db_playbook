@@ -1,0 +1,16 @@
+---
+
+- hosts: web
+  roles:
+    - ngnix_role
+
+- hosts: db
+  roles:
+    - mysql_role
+
+# - include_role:
+# name: ngnix_role
+
+
+# - include_role:
+# name: mysql_role
